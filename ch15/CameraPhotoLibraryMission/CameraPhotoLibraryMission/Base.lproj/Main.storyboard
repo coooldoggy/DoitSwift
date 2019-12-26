@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CameraPhotoLibraryMission" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="GMu-bj-VV2">
+                                <rect key="frame" x="16" y="40" width="382" height="836"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wbH-JY-7aN">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="836"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wEP-Cs-JHE">
+                                                <rect key="frame" x="0.0" y="0.0" width="382" height="668"/>
+                                            </imageView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="VMW-5b-aWj">
+                                                <rect key="frame" x="0.0" y="668" width="382" height="128"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uI9-Z5-IwR">
+                                                        <rect key="frame" x="0.0" y="0.0" width="191" height="128"/>
+                                                    </imageView>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="22T-e8-CdM">
+                                                        <rect key="frame" x="191" y="0.0" width="191" height="128"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="sVz-Yk-Wsj">
+                                                <rect key="frame" x="0.0" y="796" width="382" height="40"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ryd-GK-fuH">
+                                                        <rect key="frame" x="0.0" y="0.0" width="127.5" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="8N6-ZO-mOY"/>
+                                                        </constraints>
+                                                        <state key="normal" title="사진촬영"/>
+                                                        <connections>
+                                                            <action selector="captureImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ebm-KN-q4G"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7t4-9J-09l">
+                                                        <rect key="frame" x="127.5" y="0.0" width="127" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="69B-cK-X67"/>
+                                                        </constraints>
+                                                        <state key="normal" title="사진불러오기"/>
+                                                        <connections>
+                                                            <action selector="getImageFromGallery:" destination="BYZ-38-t0r" eventType="touchUpInside" id="UTg-1v-Ejf"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awr-q3-hUl">
+                                                        <rect key="frame" x="254.5" y="0.0" width="127.5" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="pnt-hh-sJ6"/>
+                                                        </constraints>
+                                                        <state key="normal" title="초기화"/>
+                                                        <connections>
+                                                            <action selector="resetImgView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="skJ-JF-BtT"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="GMu-bj-VV2" secondAttribute="bottom" constant="20" id="Yn4-Yx-Vr0"/>
+                            <constraint firstAttribute="trailing" secondItem="GMu-bj-VV2" secondAttribute="trailing" constant="16" id="e9N-Vh-kL0"/>
+                            <constraint firstItem="GMu-bj-VV2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="gXB-gm-Usb"/>
+                            <constraint firstItem="GMu-bj-VV2" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="40" id="rNS-bh-QWC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgView1" destination="wEP-Cs-JHE" id="TXl-4d-03f"/>
+                        <outlet property="imgView2" destination="uI9-Z5-IwR" id="i4X-Fn-jEv"/>
+                        <outlet property="imgView3" destination="22T-e8-CdM" id="Lgu-mX-Nb9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+</document>
