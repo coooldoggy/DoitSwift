@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Sketch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="qBB-Xr-MIj">
+                                <rect key="frame" x="16" y="44" width="382" height="832"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aj9-SX-EE0">
+                                        <rect key="frame" x="0.0" y="0.0" width="382" height="30"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txj-uk-8CE">
+                                                <rect key="frame" x="0.0" y="0.0" width="63.5" height="30"/>
+                                                <state key="normal" title="검은색"/>
+                                                <connections>
+                                                    <action selector="colorBlack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yMD-bZ-bm2"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rgL-9o-rjS">
+                                                <rect key="frame" x="63.5" y="0.0" width="64" height="30"/>
+                                                <state key="normal" title="빨간색"/>
+                                                <connections>
+                                                    <action selector="colorRed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7db-dc-0Ig"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APc-79-XbK">
+                                                <rect key="frame" x="127.5" y="0.0" width="63.5" height="30"/>
+                                                <state key="normal" title="녹색"/>
+                                                <connections>
+                                                    <action selector="colorGreen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GqE-Da-6NU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EsI-80-pae">
+                                                <rect key="frame" x="191" y="0.0" width="63.5" height="30"/>
+                                                <state key="normal" title="파란색"/>
+                                                <connections>
+                                                    <action selector="colorBlue:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DeX-Jb-i8c"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="두께" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xO6-Q7-U1h">
+                                                <rect key="frame" x="254.5" y="0.0" width="64" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RMN-D0-93a">
+                                                <rect key="frame" x="318.5" y="0.0" width="63.5" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="lineWidth:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="xsC-ZI-L7c"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vWO-No-6lv">
+                                        <rect key="frame" x="0.0" y="30" width="382" height="762"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tid-MD-r3t">
+                                        <rect key="frame" x="0.0" y="792" width="382" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jmG-Y6-IGB"/>
+                                        </constraints>
+                                        <state key="normal" title="clear"/>
+                                        <connections>
+                                            <action selector="clearImageView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BKF-Pv-PI0"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="qBB-Xr-MIj" secondAttribute="trailing" constant="16" id="IHk-25-rnC"/>
+                            <constraint firstItem="qBB-Xr-MIj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="L48-dX-Jbb"/>
+                            <constraint firstItem="qBB-Xr-MIj" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Ur5-0Z-yT7"/>
+                            <constraint firstAttribute="bottom" secondItem="qBB-Xr-MIj" secondAttribute="bottom" constant="20" id="dw4-Fg-834"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imgView" destination="vWO-No-6lv" id="eal-fH-1sS"/>
+                        <outlet property="txtLineWidth" destination="RMN-D0-93a" id="SI6-ZO-MEw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="139"/>
+        </scene>
+    </scenes>
+</document>
